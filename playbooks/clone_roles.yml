@@ -4,7 +4,7 @@
   become: true
   vars:
     git_repository: "https://github.com/pandalukasz/Ansible_roles.git"
-    git_branch: "main"
+    git_branch: "master"
   tasks:
     - name: Tworze katalog
       file:
