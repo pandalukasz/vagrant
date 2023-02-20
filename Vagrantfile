@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   end
   config.vm.network "private_network", ip: "192.168.44.44"
   
-  config.vn.provision "ansible_local" do |ansible|
+  config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "playbooks/clone_roles.yml"
     ansible.extra_vars = {
       git_repository: "https://github.com/pandalukasz/Ansible_roles.git",
