@@ -1,17 +1,17 @@
 ---
-- name: clone roles
+- name: 
   hosts: all
   become: true
   vars:
-    git_repository: "https://github.com/Panda-Academy-Core-2-0/Ansible_roles.git"
+    git_repository: "https://github.com/pandalukasz/Ansible_roles.git"
     git_branch: "main"
   tasks:
-    - name: Create a directory if it does not exist
+    - name: Tworze katalog
       file:
         path: /etc/ansible/roles
         state: directory
         mode: '0755'
-    - name: Git checkout
+    - name: Mapowanie gita
       git:
         repo: "{{ git_repository }}"
         dest: "/etc/ansible/roles"
