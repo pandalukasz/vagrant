@@ -1,0 +1,7 @@
+---
+- name: sonar and docker
+  hosts: all
+  become: true
+  roles:
+    - infrastructure
+    - sonarqube
